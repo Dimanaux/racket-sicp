@@ -1,5 +1,7 @@
 #lang racket
 
+(provide sqrt)
+
 
 (define (improve guess x)
     (average guess (/ x guess)))
