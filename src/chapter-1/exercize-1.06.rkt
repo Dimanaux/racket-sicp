@@ -1,7 +1,5 @@
 #lang racket
 
-(provide sqrt)
-
 (define (sqrt-iter guess x)
     (if (good-enough? guess x)
         guess
@@ -19,6 +17,7 @@
 (define (sqrt x)
     (sqrt-iter 1.0 x))
 
+; new if procedure
 (define (new-if predicate then-clause else-clause)
     (cond (predicate then-clause)
           (else else-clause)))
