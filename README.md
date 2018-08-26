@@ -13,6 +13,6 @@ solutions for the first chapter exercises.
 `$ racket test/chapter-1/exercise-1.03-test.rkt`
 This command will run tests for exercise 1.1.3.
 
-Solutions for other exercises contains some comments and
+Solutions for other exercises contain some comments and
 source code either.
 
