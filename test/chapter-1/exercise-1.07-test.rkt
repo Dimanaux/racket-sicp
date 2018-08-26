@@ -1,7 +1,7 @@
 #lang racket
 
 (require rackunit
-         "../../src/chapter-1/exersize-1.07.rkt")
+         "../../src/chapter-1/exercise-1.07.rkt")
 
 (define epsilon 0.001)
 
