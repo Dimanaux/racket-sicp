@@ -1,7 +1,7 @@
 #lang racket
 
 (require rackunit
-         "../../src/chapter-1/exersize-1.03.rkt")
+         "../../src/chapter-1/exercise-1.03.rkt")
 
 (check-equal? (sum-of-squares-of-two-max 2 3 4) 25 "ascending")
 (check-equal? (sum-of-squares-of-two-max 4 3 4) 32 "two max equal")
