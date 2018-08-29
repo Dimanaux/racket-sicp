@@ -2,7 +2,7 @@
 
 
 (require rackunit
-         "../../src/chapter-1/exercize-1.11.rkt")
+         "../../src/chapter-1/exercise-1.11.rkt")
 
 
 (check-equal? (f-recursive 0) 0 "f-r 0")
