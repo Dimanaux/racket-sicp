@@ -1,13 +1,17 @@
 #lang racket
 
 
+(provide f-recursive
+         f-iterative)
+
+
 (define (f-recursive n)
     (cond ((< n 3) n)
         (else
             (+
-                (f (- n 1))
-                (f (- n 2))
-                (f (- n 3))))))
+                (f-recursive (- n 1))
+                (f-recursive (- n 2))
+                (f-recursive (- n 3))))))
 
 
 (define (f-iterative n)
