@@ -5,7 +5,7 @@
          "../../src/chapter-1/exercise-1.16.rkt")
 
 (define (assert b p r)
-    (check-equals (fast-expt b p) r (format "~a^~a exptected to be ~a" b p r)))
+    (check-equal? (fast-expt b p) r (format "~a^~a exptected to be ~a" b p r)))
 
 (assert 10 2 100)
 (assert 3 4 81)
