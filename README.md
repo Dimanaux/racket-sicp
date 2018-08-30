@@ -2,7 +2,7 @@
 
 I post my solutions for the exercises from
 *Structure and Interpretation of Computer Programs*
-in this _repository_. Some exercises requires writing
+in this _repository_. Some exercises require writing
 procedures. For that ones this _repository_ also contains
 tests for some of the solutions. 
 
