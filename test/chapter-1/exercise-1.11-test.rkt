@@ -5,7 +5,7 @@
          "../../src/chapter-1/exercise-1.11.rkt")
 
 (define (assert f arg expected)
-    (check-equal? (f arg) expected (format "~a ~a = ~a" f arg expected)))
+    (check-equal? (f arg) expected (format "(~a ~a) expected to be ~a" f arg expected)))
 
 
 (define (tests f)
@@ -24,4 +24,5 @@
  
 
 (tests f-recursive)
+(tests f-iterative)
 
