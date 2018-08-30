@@ -20,11 +20,11 @@
 
 (define (f-iter a b c count)
     (if (= count 0)
-        c
+        a
         (f-iter
+            b
+            c
             (+ a b c)
-            (+ b c)
-            a
             (- count 1))))
 
 
