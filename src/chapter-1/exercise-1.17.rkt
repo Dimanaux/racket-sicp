@@ -22,7 +22,8 @@
     (cond
         ((= a 0) 0)
         ((= a 1) b)
-        ((even? a) (fast-* (halve a) (double b)))
-        (else (fast-* (halve (- a 1)) (+ b (double b))))))
+        ((even? a) (double (fast-* (halve a) b)))
+        (else (+ (fast-* (- a 1) b) b))))
+
 
 
