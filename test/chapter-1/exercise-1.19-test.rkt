@@ -15,5 +15,10 @@
 (check-equal? (fib 6) 8)
 (check-equal? (fib 7) 13)
 (check-equal? (fib 8) 21)
-(check-equal? (fib 9) 30)
+(check-equal? (fib 9) 34)
+(check-equal? (fib 10) 55)
+(check-equal? (fib 11) 89)
+(check-equal? (fib 12) 144)
+(check-equal? (fib 13) 233)
+(check-equal? (fib 14) 377)
 
