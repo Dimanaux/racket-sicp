@@ -2,7 +2,7 @@
 
 
 (define (smallest-divisor n)
-    (find-devisor n 2))
+    (find-divisor n 2))
 
 
 (define (find-divisor n test-divisor)
@@ -20,5 +20,8 @@
     (= n (smallest-divisor n)))
 
 
+(println (smallest-divisor 199))
+(println (smallest-divisor 1999))
+(println (smallest-divisor 19999))
 
 
