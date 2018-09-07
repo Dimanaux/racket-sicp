@@ -1,5 +1,30 @@
 #lang racket
 
+
+(define (expmod base exp m)
+    (cond
+        ((= exp 0) 1)
+        ((even? exp) (remainder (sqr (expmod base (/ exp 2) m)) m))
+        (else (remainder (* base (expmod base (- exp 1) m)) m))))
+
+
+(define (fermat-test n)
+    (define (try-it a)
+        (= (expmod a n n) a))
+    (try-it (+ 1 (random (- n 1)))))
+
+
+(define (fast-prime? n times)
+    (cond
+        ((= times 0) true)
+        ((fermat-test n) (prime? n (- times 1)))
+        (else #f)))
+
+(define (prime? n)
+    (fast-prime? n 15))
+
+
+
 ; TASK
 ; Write procedure search-for-primes
 ; that tests for primeness all odd
@@ -13,19 +38,38 @@
 ; Does this algorithm takes Tetha(sqrt(n))?
 
 
+(define runtime current-inexact-milliseconds)
+
+
 (define (timed-prime-test n)
     (newline)
-    (display n)
+    ; (display n)
     (start-prime-test n (runtime)))
 
 
-(define (start-prime test n start-time)
+(define (start-prime-test n start-time)
     (if (prime? n)
-        (report-prime (- (runtime) start-time))))
+        (report-prime n (- (runtime) start-time))
+        #f))
 
 
-(define (report-prime elapsed-time)
+(define (report-prime number elapsed-time)
     (display " *** ")
+    (newline)
+    (display number)
+    (display " is prime. ")
     (display elapsed-time))
+
+
+(define (search-for-primes number count)
+    (cond ((> count 0)
+        (cond
+            ((timed-prime-test number) (search-for-primes (+ number 1) (- count 1)))
+            (else (search-for-primes (+ number 1) count))))))
+
+(search-for-primes 1000 3)
+(search-for-primes 10000 3)
+(search-for-primes 100000 3)
+(search-for-primes 1000000 3)
 
 
