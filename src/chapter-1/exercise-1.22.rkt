@@ -17,8 +17,9 @@
 (define (fast-prime? n times)
     (cond
         ((= times 0) true)
-        ((fermat-test n) (prime? n (- times 1)))
+        ((fermat-test n) (fast-prime? n (- times 1)))
         (else #f)))
+
 
 (define (prime? n)
     (fast-prime? n 15))
@@ -42,7 +43,7 @@
 
 
 (define (timed-prime-test n)
-    (newline)
+    ; (newline)
     ; (display n)
     (start-prime-test n (runtime)))
 
@@ -54,11 +55,13 @@
 
 
 (define (report-prime number elapsed-time)
-    (display " *** ")
-    (newline)
+    ; (display " *** ")
+    ; (newline)
     (display number)
     (display " is prime. ")
-    (display elapsed-time))
+    (display elapsed-time)
+    (display "ms")
+    (newline))
 
 
 (define (search-for-primes number count)
