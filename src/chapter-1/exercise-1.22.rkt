@@ -20,8 +20,6 @@
 
 
 (define (timed-prime-test n)
-    ; (newline)
-    ; (display n)
     (start-prime-test n (runtime)))
 
 
@@ -32,8 +30,6 @@
 
 
 (define (report-prime number elapsed-time)
-    ; (display " *** ")
-    ; (newline)
     (display number)
     (display " is prime. ")
     (display elapsed-time)
