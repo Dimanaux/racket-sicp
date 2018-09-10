@@ -1,11 +1,11 @@
 #lang racket
 
 
-(require "fast-prime.rkt")
+(require "smallest-divisor.rkt")
 
 
 (define (prime? n)
-    (fast-prime? n 15))
+    (= (smallest-divisor n) n))
 
 
 (provide prime?)
