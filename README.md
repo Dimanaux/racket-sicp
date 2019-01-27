@@ -1,4 +1,5 @@
-# sicp-racket-solution
+# SICP exercises solved on Racket
+## racket-sicp
 
 I post my solutions for the exercises from
 *Structure and Interpretation of Computer Programs*
