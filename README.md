@@ -7,6 +7,8 @@ in this _repository_. Some exercises require writing
 procedures. For that ones this _repository_ also contains
 tests for some of the solutions. 
 
+Requires [Racket](https://racket-lang.org/) installed to run programs.
+
 `$ raco test test/chapter-1/*`
 This command will run all tests files for all of the
 solutions for the first chapter exercises.
