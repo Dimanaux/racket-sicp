@@ -1,5 +1,6 @@
 #lang racket
 
+(provide pascal-triangle)
 
 (define (pascal-triangle row index)
     (cond
@@ -7,8 +8,5 @@
             1))
         (else
             (+
-                (pascal-traingle (- row 1) index)
+                (pascal-triangle (- row 1) index)
                 (pascal-triangle (- row 1) (- index 1))))))
-
-
-
