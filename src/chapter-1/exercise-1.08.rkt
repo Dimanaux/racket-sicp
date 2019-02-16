@@ -21,7 +21,6 @@
             (* 2 guess))
         3))
 
-
 (define (cube-root-iter guess x)
     (if (good-enough? guess x)
         guess
