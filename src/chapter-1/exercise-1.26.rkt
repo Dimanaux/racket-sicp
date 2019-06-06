@@ -22,3 +22,10 @@
 ; have transformed the (log n) process into a (n) process."
 ; Explain.
 
+; Explanation:
+; (* (expmod base (/ exp 2) m) (expmod base (/ exp 2) m))
+; instead of (square (expmod base (/ exp 2) m)) usage will
+; cause calculation of expmod twice, so it leads to expential
+; complexity on it's argument which decreases with log scale.
+; Log(n) and e^(n) compensate each other and give us O(N)
+; complexity.
