@@ -54,4 +54,3 @@
 ; evaluated before procedure call.
 ; so even if guess is good enough,
 ; next sqrt-iter call will be invoked. 
-
