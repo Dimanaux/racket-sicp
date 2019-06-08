@@ -4,6 +4,8 @@
 ; Use the smallest-divisor procedure to find the smallest
 ; divisor of each of the following numbers: 199, 1999, 19999
 
+(provide smallest-divisor)
+
 (define (smallest-divisor n)
     (find-divisor n 2))
 
@@ -19,7 +21,7 @@
 (define (prime? n)
     (= n (smallest-divisor n)))
 
-(println (smallest-divisor 199))
-(println (smallest-divisor 1999))
-(println (smallest-divisor 19999))
-
+; Comment to hide in tests.
+; (println (smallest-divisor 199))
+; (println (smallest-divisor 1999))
+; (println (smallest-divisor 19999))
