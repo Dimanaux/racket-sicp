@@ -1,10 +1,7 @@
 #lang racket
 
-
-(require
-    rackunit
-    "../../src/chapter-1/exercise-1.19.rkt")
-
+(require rackunit
+         "../../src/chapter-1/exercise-1.19.rkt")
 
 (check-equal? (fib 0) 0)
 (check-equal? (fib 1) 1)
@@ -21,4 +18,3 @@
 (check-equal? (fib 12) 144)
 (check-equal? (fib 13) 233)
 (check-equal? (fib 14) 377)
-
