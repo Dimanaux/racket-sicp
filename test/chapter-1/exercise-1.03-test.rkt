@@ -9,4 +9,3 @@
 (check-equal? (sum-of-squares-of-two-max 4 2 3) 25 "ascending random order")
 (check-equal? (sum-of-squares-of-two-max -3 7 1) 50 "random order with negative")
 (check-equal? (sum-of-squares-of-two-max 0 -3 -1) 1 "negatives with zero")
-

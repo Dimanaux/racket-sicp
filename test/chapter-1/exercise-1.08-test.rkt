@@ -14,4 +14,3 @@
 (check-= (cube-root 512) 8.0 eps "cube root of 125")
 (check-= (cube-root 729) 9.0 eps "cube root of 125")
 (check-= (cube-root 25) 2.92401773821 eps "cube root of 25")
-
