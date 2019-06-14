@@ -25,7 +25,6 @@
 ; 0.249999875000001
 
 (provide simpson-rule
-         prime?
          integral)
 
 (define (sum term a next b)
@@ -51,5 +50,3 @@
                 (+ acc (* term (f (+ a (* i h)))))
                 (next term))))
     (* h (+ (f a) (iter 1 0 4) (f b)) 1/3))
-
-(define prime? simpson-rule)

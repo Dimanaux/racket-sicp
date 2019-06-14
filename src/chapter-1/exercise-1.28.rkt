@@ -41,7 +41,7 @@
         (let ([a (expmod base (/ exp 2) m)])
             (if (non-trivial-sqrt-1? a m)
                 0
-                (remainder (sqr x) m)))) ; TODO FIXME: duplicate calculation 
+                (remainder (sqr a) m)))) ; TODO FIXME: duplicate calculation 
     (cond
         ((= exp 0) 1)
         ((even? exp) (signal))
@@ -59,7 +59,7 @@
             ((= times 0) true)
             ((miller-rabin-test n) (iter (- times 1)))
             (else false)))
-    (iter (max (ceiling (log n)) 5))) ; how 
+    (iter (max (ceiling (log n)) 5)) ) 
 
 (define (miller-rabin-test n)
     (define (try-it a)
