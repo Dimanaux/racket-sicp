@@ -20,7 +20,8 @@
 ; that are relatively prime to n (i.e., all positive;
 ; integers i < n such that GCD(i,n) = 1).
 
-(require "exercise-1.28.rkt")
+(require "exercise-1.28.rkt"
+         "../lib/lib.rkt")
 
 (provide sum-of-squared-primes
          complex-product)
@@ -34,8 +35,6 @@
                 (iter (next i) (combiner (term i) acc))
                 (iter (next i) acc))))
     (iter a null-value))
-
-(define (inc x) (+ x 1))
 
 ; a.
 (define (sum-of-squared-primes a b)

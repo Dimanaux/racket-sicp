@@ -20,6 +20,8 @@
 ; generates an iterative process, write one that generates
 ; a recursive process.
 
+(require "../lib/lib.rkt")
+
 (provide product
          pi/4
          factorial)
@@ -36,10 +38,8 @@
         1
         (product-recursive term (next a) next b)))
 
-(define (succ x) (+ x 1))
-
 (define (factorial n)
-    (product identity 1 succ n))
+    (product identity 1 inc n))
 
 ; Idea is to combine terms like that:
 ; Pi    2 * 4 * 4 * 6 * 6 * 8 * ...

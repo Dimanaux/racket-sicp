@@ -10,9 +10,9 @@
 ; analogous to the expt procedure:
 
 (define (* a b)
-  (if (= b 0)
-      0
-      (+ a (* a (- b 1)))))
+    (if (= b 0)
+        0
+        (+ a (* a (- b 1)))))
 
 ; This algorithm takes a number of steps that is linear in
 ; b. Now suppose we include, together with addition,
