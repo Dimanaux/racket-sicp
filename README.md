@@ -20,7 +20,7 @@ solutions for the first chapter exercises.
 `raco test test/chapter-1/exercise-1.03-test.rkt`
 This command will run tests for exercise 1.3.
 
-`make test` - runs all tests.
+`make test` runs all tests.
 
 Solutions for exercises with no tests contain some comments and
 source code either.
